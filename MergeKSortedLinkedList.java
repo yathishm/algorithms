@@ -1,6 +1,6 @@
 import java.util.PriorityQueue;
 
-public class MergeLinkedList {
+public class MergeKSortedLinkedList {
 
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode retListNode = null, current = null;
@@ -90,7 +90,7 @@ public class MergeLinkedList {
             //      2->6
             //   ]
         //  Output: 1->1->2->3->4->4->5->6
-        MergeLinkedList mergeLinkedList = new MergeLinkedList();
+        MergeKSortedLinkedList mergeLinkedList = new MergeKSortedLinkedList();
         ListNode[] lists = new ListNode[3];
 
         ListNode listNode_00 = new ListNode(1);
