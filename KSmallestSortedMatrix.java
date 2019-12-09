@@ -3,6 +3,15 @@ import java.util.PriorityQueue;
 
 public class KSmallestSortedMatrix {
 
+    /**
+     * Given a n x n matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
+     *
+     * Note that it is the kth smallest element in the sorted order, not the kth distinct element.
+     *
+     * @param matrix
+     * @param k
+     * @return
+     */
     public int kthSmallest(int[][] matrix, int k) {
         if(null == matrix)
             throw new RuntimeException("Input matrix is empty");
@@ -17,7 +26,7 @@ public class KSmallestSortedMatrix {
     }
 
     /**
-     * 
+     *
      * @param k
      * @param matrix
      * @param maxPriorityQueue
