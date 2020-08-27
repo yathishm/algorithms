@@ -1,16 +1,35 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.
+ *
+ * Example 1:
+ *
+ * Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+ * Output: true
+ * Example 2:
+ *
+ * Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"
+ * Output: false
+ */
 public class Interleaving {
-
-//    public void isInterleave(String s1, String s2, String s3) {
-//        System.out.println( isInterleave(s1, s2, s3,new HashMap<String, Boolean>(),0, 0, 0) );
-//    }
 
     public boolean isInterleave(String s1, String s2, String s3) {
         return isInterleave(s1, s2, s3,new HashMap<String, Boolean>(),0, 0, 0);
     }
 
+    /**
+     * This method uses Dynamic programming memoization to check if the string is interleaving of 2 strings.
+     * @param s1
+     * @param s2
+     * @param s3
+     * @param cache
+     * @param i
+     * @param j
+     * @param k
+     * @return
+     */
     public boolean isInterleave(String s1, String s2, String s3, Map<String, Boolean> cache, int i, int j, int k) {
         if(i >= s1.length() && j >= s2.length() && k >= s3.length()){
             return Boolean.TRUE;
