@@ -65,11 +65,15 @@ public class UniquePath {
         if(cacheOfUniquepaths.containsKey(cachekey)){
             return cacheOfUniquepaths.get(cachekey);
         }
+
         int numberOfUniquePathsTraversingRightSide = 0;
+        // explore all the unique paths by moving right side.
         if(currentColIndex + 1 < n){
             numberOfUniquePathsTraversingRightSide = findUniquePaths(m, n, currentRowIndex, currentColIndex + 1, cacheOfUniquepaths);
         }
+
         int numberOfUniquePathsTraversingBottomSide = 0;
+        // explore all the unique paths by moving bottom side.
         if(currentRowIndex + 1 < m){
             numberOfUniquePathsTraversingBottomSide = findUniquePaths(m, n, currentRowIndex + 1, currentColIndex, cacheOfUniquepaths);
         }
